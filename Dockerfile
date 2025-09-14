@@ -1,6 +1,9 @@
 # Use PHP 8.2 with Apache
 FROM php:8.2-apache
 
+# Install mysqli and other common PHP extensions
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+
 # Set working directory
 WORKDIR /var/www/html/
 
