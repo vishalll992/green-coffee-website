@@ -4,8 +4,8 @@ FROM php:8.2-apache
 # Set working directory
 WORKDIR /var/www/html/
 
-# Copy the contents of the renamed folder into /var/www/html/
-COPY green-coffee/. /var/www/html/
+# Copy the contents of "green coffee" into /var/www/html/
+COPY ["green coffee/.", "/var/www/html/"]
 
 # Enable Apache mod_rewrite
 RUN a2enmod rewrite
