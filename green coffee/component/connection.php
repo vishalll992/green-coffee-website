@@ -1,5 +1,5 @@
 <?php
-$db_host = "db";               // must match the service name in docker-compose.yml
+$db_host = "db";               // MySQL service in docker-compose
 $db_user = "shop_user";
 $db_password = "userpassword";
 $db_name = "shop_db";
