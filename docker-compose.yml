@@ -19,3 +19,4 @@ services:
       MYSQL_PASSWORD: userpassword
     ports:
       - "3306:3306"
+
