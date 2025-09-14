@@ -1,7 +1,7 @@
 FROM php:8.2-apache
 
-# Copy project files into Apache root
-COPY green-coffee/ /var/www/html/
+# Copy everything from repo root
+COPY . /var/www/html/
 
 # Set working directory
 WORKDIR /var/www/html/
