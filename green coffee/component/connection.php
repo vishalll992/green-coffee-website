@@ -1,15 +1,12 @@
 <?php
-$db_host = "localhost";
-$db_user = "root";
-$db_password = "";
+$db_host = "db";               // must match the service name in docker-compose.yml
+$db_user = "shop_user";
+$db_password = "userpassword";
 $db_name = "shop_db";
 $db_port = 3306;
 
-// More verbose error handling
 $conn = new mysqli($db_host, $db_user, $db_password, $db_name, $db_port);
 
-if (!$conn) {
-    die("Database connection failed: " . mysqli_connect_error());
-} else {
-    // echo "Connected Successfully to database: " . $db_name;
+if ($conn->connect_error) {
+    die("Database connection failed: " . $conn->connect_error);
 }
